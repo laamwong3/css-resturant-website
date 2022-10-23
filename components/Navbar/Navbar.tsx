@@ -4,10 +4,12 @@ import { MdOutlineRestaurantMenu } from "react-icons/md";
 import styles from "./Navbar.module.css";
 import { images } from "../../constants";
 import Image from "next/image";
+import { useMediaQuery } from "react-responsive";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
 
+  const isBigScreen = useMediaQuery({ minWidth: 2000 });
   return (
     <>
       <nav className={styles.app__navbar}>
@@ -15,8 +17,8 @@ const Navbar = () => {
           <Image
             src={images.gericht}
             alt="Image Logo"
-            width={150}
-            height={42}
+            width={isBigScreen ? 210 : 150}
+            height={isBigScreen ? 60 : 42}
           />
         </div>
         <ul className={styles.app__navbar_links}>
