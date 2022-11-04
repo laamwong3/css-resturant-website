@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useMediaQuery } from "react-responsive";
 
 const Header = () => {
-  const isBigScreen = useMediaQuery({ minWidth: 1150 });
+  // const isBigScreen = useMediaQuery({ minWidth: 1150 });
 
   return (
     <div
@@ -26,7 +26,7 @@ const Header = () => {
         </button>
       </div>
       <div className="app__wrapper_img">
-        <Image src={images.welcome} alt="welcome" width={800} height={720} />
+        <Image src={images.welcome} alt="welcome" />
       </div>
     </div>
   );

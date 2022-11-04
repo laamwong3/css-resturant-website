@@ -9,3 +9,8 @@
   line-height: 117px;
   font-size: 90px;
 }
+@media screen and (max-width: 650px) {
+  .app__header_h1 {
+    font-size: 60px;
+  }
+}
