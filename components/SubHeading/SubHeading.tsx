@@ -1,12 +1,12 @@
 import Image from "next/image";
-import React from "react";
+import React, { FC } from "react";
 import { images } from "../../constants";
 
 interface SubHeadingProps {
   title: string;
 }
 
-const SubHeading = ({ title }: SubHeadingProps) => {
+const SubHeading: FC<SubHeadingProps> = ({ title }) => {
   return (
     <div style={{ marginBottom: "1rem" }}>
       <p className="p__cormorant">{title}</p>

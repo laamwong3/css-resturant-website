@@ -1,0 +1,16 @@
+.app__menu {
+  flex-direction: column;
+  background: var(--color-black);
+}
+.app__menu_title {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.app__menu_menu {
+  width: 100%;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+}
