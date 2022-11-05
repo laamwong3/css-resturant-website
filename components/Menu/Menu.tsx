@@ -20,7 +20,7 @@ const Menu = () => {
           <p className={styles.app__menu_heading}>Wine & Beer</p>
           <div className={styles.app__menu_menu_items}>
             {data.wines.map((wine, index) => (
-              <p key={index}>{wine.title}</p>
+              <MenuItem key={index} data={wine} />
             ))}
           </div>
         </div>
@@ -28,10 +28,10 @@ const Menu = () => {
           <Image src={images.menu} alt="menu image" />
         </div>
         <div className={`${styles.app__menu_cocktails} flex__center`}>
-          <p className={styles.app__menu_heading}>Wine & Beer</p>
+          <p className={styles.app__menu_heading}>Cocktails</p>
           <div className={styles.app__menu_menu_items}>
             {data.cocktails.map((cocktail, index) => (
-              <p key={index}>{cocktail.title}</p>
+              <MenuItem key={index} data={cocktail} />
             ))}
           </div>
         </div>
