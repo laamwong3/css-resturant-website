@@ -1,0 +1,41 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 5rem;
+}
+.content_quote {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+.content_quote_img {
+  width: 47px;
+  height: 40px;
+  margin: 0 1rem 1rem 0;
+}
+.sign {
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.sign p:first-child {
+  color: var(--color-golden);
+  font-family: var(--font-base);
+  font-weight: 400;
+  font-size: 32;
+  line-height: 41px;
+  letter-spacing: 0.04rem;
+  text-transform: capitalize;
+}
+.sign_signature {
+  margin-top: 3rem;
+  width: 250px;
+}
+
+@media screen and (max-width: 650px) {
+  .sign_signature {
+    margin-top: 3rem;
+    width: 80%;
+  }
+}
