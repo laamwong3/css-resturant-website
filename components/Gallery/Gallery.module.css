@@ -1,6 +1,9 @@
 .gallery {
+  /* display: flex;
+  flex-direction: row; */
   background: var(--color-black);
   padding: 4rem 0 4rem 6rem;
+  width: 100vw;
 }
 
 .gallery_content {
@@ -23,10 +26,102 @@
   position: relative;
 }
 .gallery_images_container {
+  /* flex: 1; */
   display: flex;
   flex-direction: row;
   width: max-content;
   overflow-x: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* .gallery_images_container::-webkit-scrollbar {
+  display: none;
+} */
+.gallery_images_card {
+  position: relative;
+  min-width: 300px;
+  height: 447px;
+  margin-right: 2rem;
+}
+.gallery_images_card_icon {
+  position: absolute;
+  color: #fff;
+  font-size: 2rem;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 0.5s ease-in;
+}
+.gallery_images_card_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  transition: 0.5s ease-in;
+}
+.gallery_images_card:hover .gallery_images_card_img {
+  opacity: 0.35;
+}
+.gallery_images_card:hover .gallery_images_card_icon {
+  opacity: 1;
+}
+.gallery_images_arrow {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  padding: 0 1rem;
+  bottom: 5%;
+}
+.gallery_images_arrow_icon {
+  color: var(--color-golden);
+  font-size: 2rem;
+  cursor: pointer;
+  background-color: var(--color-black);
+  border-radius: 5px;
+}
+.gallery_images_arrow_icon:hover {
+  color: var(--color-white);
+}
+
+@media screen and (min-width: 2000px) {
+  .gallery_content {
+    min-width: 1000px;
+    padding-right: 4rem;
+  }
+  .gallery_images_card {
+    min-width: 400px;
+    height: 550px;
+  }
+}
+@media screen and (max-width: 1150px) {
+  .gallery {
+    flex-direction: column;
+  }
+  .gallery_images {
+    width: 100%;
+    margin: 5rem 0;
+  }
+}
+@media screen and (max-width: 850px) {
+  .gallery {
+    padding: 4rem 0 4rem 4rem;
+  }
+}
+@media screen and (max-width: 650px) {
+  .gallery {
+    padding: 4rem 0 4rem 2rem;
+  }
+  .gallery_content {
+    min-width: 100%;
+    /* flex: 1; */
+  }
+  .gallery_images_card {
+    min-width: 240px;
+    height: 320px;
+  }
+  .gallery_images_container {
+    width: 100%;
+  }
 }

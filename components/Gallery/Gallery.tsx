@@ -51,7 +51,9 @@ const Gallery = () => {
               className={`${styles.gallery_images_card} flex__center`}
               key={index}
             >
-              <Image src={image} alt="gallery" />
+              <div className={styles.gallery_images_card_img}>
+                <Image src={image} alt="gallery" />
+              </div>
               <BsInstagram className={styles.gallery_images_card_icon} />
             </div>
           ))}
