@@ -13,7 +13,7 @@ const Menu = () => {
     >
       <div className={styles.app__menu_title}>
         <SubHeading title="Menu That Fits You Palatte" />
-        <h1 className="headtext__cormorant">Today's Special</h1>
+        <h1 className="headtext__cormorant">Today&apos;s Special</h1>
       </div>
       <div className={styles.app__menu_menu}>
         <div className={`${styles.app__menu_wines} flex__center`}>

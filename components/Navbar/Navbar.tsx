@@ -5,6 +5,7 @@ import styles from "./Navbar.module.css";
 import { images } from "../../constants";
 import Image from "next/image";
 import { useMediaQuery } from "react-responsive";
+import Link from "next/link";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -23,29 +24,39 @@ const Navbar = () => {
         </div>
         <ul className={styles.app__navbar_links}>
           <li className="p__opensans">
-            <a href="#home">home</a>
+            <Link href="#home" scroll={false}>
+              <a>home</a>
+            </Link>
           </li>
           <li className="p__opensans">
-            <a href="#about">about</a>
+            <Link href="#about" scroll={false}>
+              <a>about</a>
+            </Link>
           </li>
           <li className="p__opensans">
-            <a href="#menu">menu</a>
+            <Link href="#menu" scroll={false}>
+              <a>menu</a>
+            </Link>
           </li>
           <li className="p__opensans">
-            <a href="#awards">awards</a>
+            <Link href="#awards" scroll={false}>
+              <a>awards</a>
+            </Link>
           </li>
           <li className="p__opensans">
-            <a href="#contract">contract</a>
+            <Link href="#contract" scroll={false}>
+              <a>contract</a>
+            </Link>
           </li>
         </ul>
         <div className={styles.app__navbar_login}>
-          <a href="#login" className="p__opensans">
-            Log In / Register
-          </a>
+          <Link href="#login">
+            <a className="p__opensans">Log In / Register</a>
+          </Link>
           <div />
-          <a href="/" className="p__opensans">
-            Book a Table
-          </a>
+          <Link href="/">
+            <a className="p__opensans">Book a Table</a>
+          </Link>
         </div>
         <div className={styles.app__navbar_smallscreen}>
           <GiHamburgerMenu
