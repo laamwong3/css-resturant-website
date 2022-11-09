@@ -18,3 +18,17 @@
   margin-top: 5rem;
   padding: 0 2rem;
 }
+.footer_links_contact,
+.footer_links_logo,
+.footer_links_work {
+  flex: 1;
+  margin: 1rem;
+  text-align: center;
+}
+.footer_links_logo_img {
+  width: 210px;
+  margin-bottom: 0.75rem;
+}
+.footer_links_work p:nth-child(2n + 1) {
+  margin-bottom: 1rem;
+}

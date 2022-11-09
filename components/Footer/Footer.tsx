@@ -19,8 +19,13 @@ const Footer = () => {
           <p className="p__opensans">+1 212-344-1230</p>
           <p className="p__opensans">+1 212-555-1230</p>
         </div>
-        <div className={styles.footer_links_logo}>
-          <Image src={images.gericht} alt={"footer logo"} />
+        <div
+          className={`${styles.footer_links_logo} flex__center`}
+          style={{ flexDirection: "column" }}
+        >
+          <div className={`${styles.footer_links_logo_img}`}>
+            <Image src={images.gericht} alt={"footer logo"} />
+          </div>
 
           <p className="p__opensans">
             &quot;The best way to find yourself is to lose yourself in the
